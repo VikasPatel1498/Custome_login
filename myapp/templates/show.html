@@ -1,0 +1,27 @@
+{% extends 'base.html'%}
+{% block body %}
+<table border="1">
+    <tr>
+        <th>No</th>
+        <th>Name</th>
+        <th>Password</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Action</th>
+    </tr>
+    {% for mem in member %}
+    <tr>
+        <th>{{mem.id}}</th>
+        <th>{{mem.username}}</th>
+        <th>{{mem.password}}</th>
+        <th>{{mem.firstname}}</th>
+        <th>{{mem.lastname}}</th>
+        <th><a href="/delete/{{mem.id}}">Delete</a></th>
+        
+        
+    
+    </tr>
+    {% endfor %}
+</table>
+{% endblock%}
+    
